@@ -1,0 +1,57 @@
+@tonalidadePrincipal: rgba(150, 75, 0, 0.486);
+@title: 'Lobster', cursive;
+@text: 'Lato', sans-serif;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: @tonalidadePrincipal;
+    color: black;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    
+    .title {
+        text-align: center;
+    }
+}
+
+.container {
+    max-width: 960px;
+    width: 80%;
+    margin: 0 auto;
+
+    h1 {
+        font-family: @title;
+    }
+}
+
+.accordion {
+    border: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+.accordion-header {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.accordion-content {
+    padding: 8px;
+    border: 1px solid #eee;
+    display: none;
+    text-align:justify;
+    font-family: @text;
+}
+
+.accordion.is-open .accordion-content{
+    display: block;
+}
